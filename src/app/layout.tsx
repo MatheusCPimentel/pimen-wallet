@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
+import "./colors.css";
 import { Theme, ThemePanel } from "@radix-ui/themes";
 
 const inter = Inter({ subsets: ["latin"] });
@@ -20,7 +21,7 @@ export default function RootLayout({
       <body className={`${inter.className} antialiased`}>
         <Theme appearance="dark">
           {children}
-          {/* <ThemePanel /> */}
+          <ThemePanel defaultOpen={false} />
         </Theme>
       </body>
     </html>
